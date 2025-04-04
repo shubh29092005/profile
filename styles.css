@@ -1,45 +1,68 @@
+/* General styles */
 body {
-    background-color: #121212; /* Dark background */
-    color: #ffffff; /* White text */
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode */
+.dark-mode {
+    background: #222;
+    color: #fff;
+}
+
+/* Header */
+header {
+    background: #333;
+    padding: 15px;
+}
+
+#darkModeToggle {
+    background: yellow;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Profile section */
+.profile {
+    padding: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: blue;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: darkblue;
+}
+
+/* Skills */
+.skills ul {
+    list-style: none;
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-}
-
-h1, h2, h3 {
-    color: #ffcc00; /* Highlighted headings */
-}
-
-a {
-    color: #1e90ff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Add box shadows & borders */
-.section {
-    background: #1e1e1e;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
-}
-.section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-in-out;
-}
-
-.section.show {
-    opacity: 1;
-    transform: translateY(0);
+.skills li {
+    padding: 5px 0;
 }
