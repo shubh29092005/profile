@@ -1,10 +1,15 @@
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    
-    document.getElementById("messageStatus").textContent = "Thank you! Your message has been sent.";
-    document.getElementById("messageStatus").style.color = "lightgreen";
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".section");
 
-    setTimeout(() => {
-        document.getElementById("messageStatus").textContent = "";
-    }, 3000);
+    function revealSections() {
+        sections.forEach((section) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 100) {
+                section.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealSections);
+    revealSections();
 });
